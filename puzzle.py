@@ -10,12 +10,12 @@ CKnight = Symbol("C is a Knight")
 CKnave = Symbol("C is a Knave")
 
 KnowledgeBase = And(
-    Or(AKnight, AKnave),
-    Or(BKnight, BKnave),
-    Or(CKnight, CKnave),
-    Not(And(AKnight, AKnave)),
-    Not(And(BKnight, BKnave)),
-    Not(And(CKnight, CKnave)),
+    Or(AKnave, AKnight),
+    Or(BKnave, BKnight),
+    Or(CKnave, CKnight),
+    Not(And(AKnave, AKnight)),
+    Not(And(BKnave, BKnight)),
+    Not(And(CKnave, CKnight)),
 
 )
 
@@ -26,7 +26,7 @@ knowledge0 = And(
     # He can't be both, so prove that he is not a Knight, keep that structure all the way down. 
     Implication(AKnight, And(AKnight, AKnave)),
     # Prove he is a Knave by showing that he can't be a Knight and a Knave.
-    Implication(AKnave, Not(And(AKnight, AKnave)))
+    Implication(AKnave, Not(And(AKnave, AKnight)))
 )
 
 # Puzzle 1
