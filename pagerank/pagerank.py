@@ -7,7 +7,7 @@ DAMPING = 0.85
 SAMPLES = 10000
 
 #fixes - typos (corus instead of corpus), used weights in with probability, forgot to return sample_pagerank, messy logic in transition model, formatting cleanup. 
-#notes for future, in py [0] always returns first item, don't forget that. use the formula they provide. 
+#notes for future, in py [0] always returns first item, don't forget that. use the formula they provide. overall much better, still needs some cleaning up. this is starting to click for me. 
 
 def main():
     if len(sys.argv) != 2:
